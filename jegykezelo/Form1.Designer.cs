@@ -43,6 +43,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -65,7 +66,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button7 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.label2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(221, 103);
+            this.label2.Location = new System.Drawing.Point(221, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 19);
             this.label2.TabIndex = 3;
@@ -102,7 +106,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(438, 103);
+            this.label3.Location = new System.Drawing.Point(476, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 19);
             this.label3.TabIndex = 5;
@@ -111,7 +115,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(442, 138);
+            this.comboBox1.Location = new System.Drawing.Point(582, 139);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 22);
             this.comboBox1.TabIndex = 6;
@@ -189,7 +193,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(225, 139);
+            this.numericUpDown1.Location = new System.Drawing.Point(225, 157);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -227,6 +231,10 @@
             // 
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.button8);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.label12);
@@ -261,13 +269,27 @@
             this.tabPage1.Text = "felhasználói oldal";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.MediumBlue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button7.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(25, 185);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(121, 63);
+            this.button7.TabIndex = 39;
+            this.button7.Text = "rendezvény kikeresése";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.MediumBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(225, 228);
+            this.button6.Location = new System.Drawing.Point(872, 316);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(80, 32);
             this.button6.TabIndex = 38;
@@ -280,7 +302,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.label12.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(321, 235);
+            this.label12.Location = new System.Drawing.Point(976, 318);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 19);
             this.label12.TabIndex = 37;
@@ -291,7 +313,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(582, 206);
+            this.button5.Location = new System.Drawing.Point(480, 246);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 63);
             this.button5.TabIndex = 36;
@@ -383,7 +405,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(442, 166);
+            this.button2.Location = new System.Drawing.Point(582, 167);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 63);
             this.button2.TabIndex = 28;
@@ -426,7 +448,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(225, 185);
+            this.numericUpDown2.Location = new System.Drawing.Point(225, 208);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -442,7 +464,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(582, 76);
+            this.button3.Location = new System.Drawing.Point(582, 61);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 51);
             this.button3.TabIndex = 23;
@@ -510,19 +532,51 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 15;
             // 
-            // button7
+            // label13
             // 
-            this.button7.BackColor = System.Drawing.Color.MediumBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Gadugi", 12F);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(25, 185);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(121, 63);
-            this.button7.TabIndex = 39;
-            this.button7.Text = "rendezvény kikeresése";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label13.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(338, 77);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(238, 19);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "összes rendezvény megtekintése:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label14.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(221, 270);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(253, 19);
+            this.label14.TabIndex = 41;
+            this.label14.Text = "kijelölt rendezvény kosárhoz adása:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label15.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(578, 323);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(293, 19);
+            this.label15.TabIndex = 42;
+            this.label15.Text = "kíváncsi vagy hol lesz? kattints a gombra:";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.MediumBlue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(342, 167);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(121, 63);
+            this.button8.TabIndex = 43;
+            this.button8.Text = "rendezvény kikeresése";
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -588,6 +642,10 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button8;
     }
 }
 

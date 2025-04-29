@@ -104,7 +104,7 @@ namespace jegykezelo
 
         private void button6_Click(object sender, EventArgs e)
         {
-            label12.Text = hely[hely.IndexOf(listBox1.SelectedIndex.ToString())];
+            label12.Text = hely[nev.IndexOf(listBox1.SelectedItem.ToString())];
         }
     }
 }
