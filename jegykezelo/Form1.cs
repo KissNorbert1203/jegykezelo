@@ -19,6 +19,7 @@ namespace jegykezelo
         public static List<int> ar = new List<int>();
         public static List<string> hely = new List<string>();
         public static List<string> datum = new List<string>();
+        public static int osszar  = 0;
         public Form1()
         {
             InitializeComponent();
@@ -68,6 +69,7 @@ namespace jegykezelo
 
         private void button5_Click(object sender, EventArgs e)
         {
+            
             if(listBox1.SelectedItem == null)
             {
                 MessageBox.Show("Nem választottál ki semmit!");
@@ -75,7 +77,10 @@ namespace jegykezelo
             else
             {
                 listBox2.Items.Add(listBox1.SelectedItem);
+                osszar = osszar + ar[nev.IndexOf(listBox1.SelectedItem.ToString())];
+                label10.Text =osszar.ToString();
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -93,6 +98,7 @@ namespace jegykezelo
 
         private void button7_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             for (int i = 0; i < nev.Count; i++)
             {
                 if (nev[i].Contains(textBox1.Text))
@@ -102,9 +108,25 @@ namespace jegykezelo
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            int felso = Convert.ToInt32(numericUpDown1.Value);
+            int also = Convert.ToInt32(numericUpDown2.Value);
+            for(int i = 0;i < ar.Count; i++)
+            {
+                if (ar[i] > also && ar[i] < felso)
+                {
+                    listBox1.Items.Add(nev[i]);
+                }
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             label12.Text = hely[nev.IndexOf(listBox1.SelectedItem.ToString())];
+            label11.Text = ar[nev.IndexOf(listBox1.SelectedItem.ToString())].ToString() + " Ft";
+            label21.Text = datum[nev.IndexOf(listBox1.SelectedItem.ToString())];
         }
     }
 }
