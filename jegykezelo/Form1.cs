@@ -67,22 +67,6 @@ namespace jegykezelo
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
-            if(listBox1.SelectedItem == null)
-            {
-                MessageBox.Show("Nem választottál ki semmit!");
-            }
-            else
-            {
-                listBox2.Items.Add(listBox1.SelectedItem);
-                osszar = osszar + ar[nev.IndexOf(listBox1.SelectedItem.ToString())];
-                label10.Text =osszar.ToString();
-            }
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -127,6 +111,59 @@ namespace jegykezelo
             label12.Text = hely[nev.IndexOf(listBox1.SelectedItem.ToString())];
             label11.Text = ar[nev.IndexOf(listBox1.SelectedItem.ToString())].ToString() + " Ft";
             label21.Text = datum[nev.IndexOf(listBox1.SelectedItem.ToString())];
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listBox3.Items.Clear();
+            for (int i = 0; i < nev.Count; i++)
+            {
+                listBox3.Items.Add($"{nev[i]}");
+
+            }
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            if (listBox3.SelectedItem == null)
+            {
+                MessageBox.Show("Nem választottál ki semmit!");
+            }
+            else
+            {
+                listBox2.Items.Add(listBox3.SelectedItem);
+                osszar = osszar + ar[nev.IndexOf(listBox3.SelectedItem.ToString())];
+                label10.Text = $"{osszar.ToString()} Ft";
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string filePath = "meglevoJegyek.txt";
+
+            using (StreamWriter writer = new StreamWriter(filePath, append: true))
+            {
+                for (int i = 0; i < listBox2.Items.Count; i++)
+                {
+                    writer.WriteLine($"{listBox2.Items[i]};");
+                }
+            }
+            MessageBox.Show("Sikeresen lefoglaltad a jegyet és naplóztam is");
         }
     }
 }
