@@ -19,7 +19,11 @@ namespace jegykezelo
         public static List<int> ar = new List<int>();
         public static List<string> hely = new List<string>();
         public static List<string> datum = new List<string>();
+
         public static int osszar  = 0;
+        public static int fo = 0;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -125,16 +129,38 @@ namespace jegykezelo
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+            fo = Convert.ToInt32(numericUpDown3.Value);
             if (listBox3.SelectedItem == null)
             {
-                MessageBox.Show("Nem választottál ki semmit!");
+                MessageBox.Show("Nem választottad ki a rendezvényt!");
+            }
+            else if (radioButton4.Checked == false && radioButton5.Checked == false && radioButton6.Checked == false)
+            {
+                MessageBox.Show("Válaszd ki a helyszínt!");
+            }
+            else if (textBox2.Text == null)
+            {
+                MessageBox.Show("Nem írtál nevet!");
             }
             else
             {
-                listBox2.Items.Add(listBox3.SelectedItem);
-                osszar = osszar + ar[nev.IndexOf(listBox3.SelectedItem.ToString())];
+                if (radioButton6.Checked == true)
+                {
+                    osszar += 1000;
+                }
+                if (checkBox3.Checked == true)
+                {
+                    osszar += 990;
+                }
+                if (checkBox4.Checked == true)
+                {
+                    osszar += 590;
+                }
+                listBox2.Items.Add($"{fo} főre {listBox3.SelectedItem}, {textBox2.Text} néven, {datum[nev.IndexOf(listBox3.SelectedItem.ToString())]}");
+                osszar = fo * (osszar + ar[nev.IndexOf(listBox3.SelectedItem.ToString())]);
                 label10.Text = $"{osszar.ToString()} Ft";
             }
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -160,10 +186,15 @@ namespace jegykezelo
             {
                 for (int i = 0; i < listBox2.Items.Count; i++)
                 {
-                    writer.WriteLine($"{listBox2.Items[i]};");
+                    writer.WriteLine($"{listBox2.Items[i]};{label10.Text}; ");
                 }
             }
             MessageBox.Show("Sikeresen lefoglaltad a jegyet és naplóztam is");
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
