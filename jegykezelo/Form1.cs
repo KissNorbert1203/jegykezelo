@@ -27,7 +27,8 @@ namespace jegykezelo
         public Form1()
         {
             InitializeComponent();
-            
+            listBox1.Sorted = true;
+            listBox3.Sorted = true;
             string allomany = "jegyek.txt";
             try
             {
