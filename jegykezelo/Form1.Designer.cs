@@ -87,6 +87,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -144,6 +145,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(-4, 0);
@@ -795,6 +797,19 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 15;
             // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Gadugi", 12F);
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(652, 0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(247, 35);
+            this.button12.TabIndex = 53;
+            this.button12.Text = "alkalmazás személyreszabása";
+            this.button12.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -886,6 +901,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Button button12;
     }
 }
 
