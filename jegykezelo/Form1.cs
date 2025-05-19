@@ -27,6 +27,14 @@ namespace jegykezelo
         public Form1()
         {
             InitializeComponent();
+            dateTimePicker1 = new DateTimePicker();
+            //számformátum beállítása
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new System.Drawing.Point(10, 10);
+            dateTimePicker1.ValueChanged += new
+           EventHandler(DateTimePicker_ValueChanged);
+            Controls.Add(dateTimePicker1);
+
             listBox1.Sorted = true;
             listBox3.Sorted = true;
             string allomany = "jegyek.txt";
@@ -53,6 +61,7 @@ namespace jegykezelo
                     {
                         egyediTipus.Add(tipus[i]);
                         comboBox1.Items.Add(tipus[i]);
+                        comboBox2.Items.Add(tipus[i]);
                     }
                 }
             }
@@ -196,6 +205,56 @@ namespace jegykezelo
         private void tabPage3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void betűttípusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //változóba bekerül a kiválasztott szín neve vagy RGB kódja
+                Color selectedColor = colorDialog1.Color;
+                MessageBox.Show($"A választott szín: {selectedColor}", "Betűszín kiválasztva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.ForeColor = selectedColor;
+            }
+        }
+
+        private void betűtípusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Font selectedFont = fontDialog1.Font;
+                MessageBox.Show($"A választott betűtípus: {selectedFont.Name}, { selectedFont.Size}pt", "Betűtípus kiválasztva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                label1.Font = selectedFont;
+                label2.Font = selectedFont;
+                label3.Font = selectedFont;
+                label4.Font = selectedFont;
+                label5.Font = selectedFont;
+                label7.Font = selectedFont;
+                label8.Font = selectedFont;
+                label9.Font = selectedFont;
+                label10.Font = selectedFont;
+                label11.Font = selectedFont;
+                label12.Font = selectedFont;
+                label13.Font = selectedFont;
+                label14.Font = selectedFont;
+                label15.Font = selectedFont;
+                label16.Font = selectedFont;
+                label17.Font = selectedFont;
+                label18.Font = selectedFont;
+                label19.Font = selectedFont;
+                label20.Font = selectedFont;
+                label21.Font = selectedFont;
+                radioButton4.Font = selectedFont;
+                radioButton5.Font = selectedFont;
+                radioButton6.Font = selectedFont;
+                checkBox3.Font = selectedFont;
+                checkBox4.Font = selectedFont;
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Selected date: " + dateTimePicker1.Value.ToShortDateString());
         }
     }
 }
