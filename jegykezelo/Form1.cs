@@ -27,16 +27,15 @@ namespace jegykezelo
         public Form1()
         {
             InitializeComponent();
-            dateTimePicker1 = new DateTimePicker();
+            DateTimePicker dateTimePicker1 = new DateTimePicker();
             //számformátum beállítása
             dateTimePicker1.Format = DateTimePickerFormat.Short;
             dateTimePicker1.Location = new System.Drawing.Point(10, 10);
-            dateTimePicker1.ValueChanged += new
-           EventHandler(DateTimePicker_ValueChanged);
-            Controls.Add(dateTimePicker1);
-
+            Convert.ToInt32(numericUpDown4.Value);
             listBox1.Sorted = true;
             listBox3.Sorted = true;
+            
+            
             string allomany = "jegyek.txt";
             try
             {
@@ -252,9 +251,20 @@ namespace jegykezelo
             }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Selected date: " + dateTimePicker1.Value.ToShortDateString());
+            string fajl = "jegyek.txt";
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(fajl, append: true))
+                {
+                    writer.WriteLine($"\n{textBox3.Text};{comboBox2.SelectedItem.ToString()};{numericUpDown4.Value};{textBox4.Text};{dateTimePicker1.Value.ToShortDateString()}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hiba", ex.Message);
+            }
         }
     }
 }

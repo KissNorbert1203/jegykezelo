@@ -39,6 +39,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.alkalmazásTestreszabásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.betűszínToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.betűtípusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -86,6 +87,15 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -93,16 +103,6 @@
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.betűtípusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -114,8 +114,8 @@
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -207,9 +207,16 @@
             // betűszínToolStripMenuItem
             // 
             this.betűszínToolStripMenuItem.Name = "betűszínToolStripMenuItem";
-            this.betűszínToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.betűszínToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.betűszínToolStripMenuItem.Text = "Betűszín";
             this.betűszínToolStripMenuItem.Click += new System.EventHandler(this.betűttípusToolStripMenuItem_Click);
+            // 
+            // betűtípusToolStripMenuItem
+            // 
+            this.betűtípusToolStripMenuItem.Name = "betűtípusToolStripMenuItem";
+            this.betűtípusToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.betűtípusToolStripMenuItem.Text = "Betűtípus";
+            this.betűtípusToolStripMenuItem.Click += new System.EventHandler(this.betűtípusToolStripMenuItem_Click);
             // 
             // label6
             // 
@@ -234,6 +241,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Jegy rögzítése";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // numericUpDown1
             // 
@@ -808,6 +816,95 @@
             this.tabPage2.Text = "Fejlesztői oldal";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label28.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(3, 348);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(179, 19);
+            this.label28.TabIndex = 49;
+            this.label28.Text = "Mikor lesz a rendezvény:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(197, 256);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(158, 22);
+            this.textBox4.TabIndex = 48;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label27.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(20, 259);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(162, 19);
+            this.label27.TabIndex = 47;
+            this.label27.Text = "Hol lesz a rendezvény:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(197, 437);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 22);
+            this.comboBox2.TabIndex = 46;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label26.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(32, 437);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(142, 19);
+            this.label26.TabIndex = 45;
+            this.label26.Text = "Rendezvény típusa:";
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(197, 183);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(96, 22);
+            this.numericUpDown4.TabIndex = 44;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label25.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(105, 186);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(69, 19);
+            this.label25.TabIndex = 43;
+            this.label25.Text = "Jegy ára:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(197, 112);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(158, 22);
+            this.textBox3.TabIndex = 42;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.label24.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(41, 115);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(133, 19);
+            this.label24.TabIndex = 41;
+            this.label24.Text = "Rendezvény neve:";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.ForestGreen;
@@ -849,108 +946,11 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 15;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // betűtípusToolStripMenuItem
-            // 
-            this.betűtípusToolStripMenuItem.Name = "betűtípusToolStripMenuItem";
-            this.betűtípusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.betűtípusToolStripMenuItem.Text = "Betűtípus";
-            this.betűtípusToolStripMenuItem.Click += new System.EventHandler(this.betűtípusToolStripMenuItem_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.label24.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(41, 115);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(133, 19);
-            this.label24.TabIndex = 41;
-            this.label24.Text = "Rendezvény neve:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(197, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 22);
-            this.textBox3.TabIndex = 42;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.label25.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(105, 186);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(69, 19);
-            this.label25.TabIndex = 43;
-            this.label25.Text = "Jegy ára:";
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(197, 183);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(96, 22);
-            this.numericUpDown4.TabIndex = 44;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.label26.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(32, 437);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(142, 19);
-            this.label26.TabIndex = 45;
-            this.label26.Text = "Rendezvény típusa:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(197, 437);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 22);
-            this.comboBox2.TabIndex = 46;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.label27.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(20, 259);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(162, 19);
-            this.label27.TabIndex = 47;
-            this.label27.Text = "Hol lesz a rendezvény:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(197, 256);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 22);
-            this.textBox4.TabIndex = 48;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.label28.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(3, 348);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(179, 19);
-            this.label28.TabIndex = 49;
-            this.label28.Text = "Mikor lesz a rendezvény:";
             // 
             // Form1
             // 
@@ -981,9 +981,9 @@
             this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
 
         }
