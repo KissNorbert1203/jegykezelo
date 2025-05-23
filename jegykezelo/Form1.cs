@@ -254,17 +254,38 @@ namespace jegykezelo
         private void button1_Click(object sender, EventArgs e)
         {
             string fajl = "jegyek.txt";
-            try
+            if (textBox3.Text == "")
             {
-                using (StreamWriter writer = new StreamWriter(fajl, append: true))
+                MessageBox.Show("Nem adtál meg nevet!");
+            }
+            else if(numericUpDown4.Value == 0)
+            {
+                MessageBox.Show("Nem adtál meg árat!");
+            }
+            else if (textBox4.Text == "")
+            {
+                MessageBox.Show("Nem adtál meg helyet!");
+            }
+            else if(comboBox2.SelectedItem == null)
+            {
+                MessageBox.Show("Nem adtál meg típust");
+            }
+            else
+            {
+                try
                 {
-                    writer.WriteLine($"\n{textBox3.Text};{comboBox2.SelectedItem.ToString()};{numericUpDown4.Value};{textBox4.Text};{dateTimePicker1.Value.ToShortDateString()}");
+                    using (StreamWriter writer = new StreamWriter(fajl, append: true))
+                    {
+                        writer.WriteLine($"{textBox3.Text};{comboBox2.SelectedItem.ToString()};{numericUpDown4.Value};{textBox4.Text};{dateTimePicker1.Value.ToShortDateString()}");
+                        MessageBox.Show("A rendezvény hozzá lett adva a listához");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hiba", ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hiba", ex.Message);
-            }
+            
         }
     }
 }

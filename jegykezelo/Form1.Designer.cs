@@ -147,14 +147,14 @@
             this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(21, 442);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 19);
+            this.label3.Size = new System.Drawing.Size(138, 19);
             this.label3.TabIndex = 5;
-            this.label3.Text = "jegy típusa:";
+            this.label3.Text = "rendezvény típusa:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(134, 439);
+            this.comboBox1.Location = new System.Drawing.Point(165, 442);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 22);
             this.comboBox1.TabIndex = 6;
@@ -235,7 +235,7 @@
             this.button1.BackColor = System.Drawing.Color.ForestGreen;
             this.button1.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(904, 253);
+            this.button1.Location = new System.Drawing.Point(517, 98);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 94);
             this.button1.TabIndex = 14;
@@ -245,7 +245,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(326, 289);
+            this.numericUpDown1.Location = new System.Drawing.Point(337, 285);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -358,11 +358,11 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.label8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(227, 288);
+            this.label8.Location = new System.Drawing.Point(222, 289);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 19);
+            this.label8.Size = new System.Drawing.Size(73, 19);
             this.label8.TabIndex = 45;
-            this.label8.Text = "felső határ:";
+            this.label8.Text = "Felső határ:";
             // 
             // label7
             // 
@@ -381,7 +381,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(456, 298);
+            this.button8.Location = new System.Drawing.Point(459, 289);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(121, 63);
             this.button8.TabIndex = 43;
@@ -430,7 +430,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(285, 417);
+            this.button2.Location = new System.Drawing.Point(312, 417);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 63);
             this.button2.TabIndex = 28;
@@ -440,7 +440,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(326, 343);
+            this.numericUpDown2.Location = new System.Drawing.Point(337, 342);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             100000,
             0,
