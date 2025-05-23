@@ -235,7 +235,7 @@
             this.button1.BackColor = System.Drawing.Color.ForestGreen;
             this.button1.Font = new System.Drawing.Font("Gadugi", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(517, 98);
+            this.button1.Location = new System.Drawing.Point(513, 112);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 94);
             this.button1.TabIndex = 14;
@@ -360,7 +360,7 @@
             this.label8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(222, 289);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 19);
+            this.label8.Size = new System.Drawing.Size(86, 19);
             this.label8.TabIndex = 45;
             this.label8.Text = "Felső határ:";
             // 
