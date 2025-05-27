@@ -297,7 +297,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1081, 620);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "jegykeresés";
+            this.tabPage1.Text = "rendezvény keresés";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label21

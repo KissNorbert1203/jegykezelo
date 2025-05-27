@@ -147,7 +147,7 @@ namespace jegykezelo
             {
                 MessageBox.Show("Válaszd ki a helyszínt!");
             }
-            else if (textBox2.Text == null)
+            else if (textBox2.Text == "")
             {
                 MessageBox.Show("Nem írtál nevet!");
             }
