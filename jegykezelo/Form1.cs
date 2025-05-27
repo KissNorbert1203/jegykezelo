@@ -213,7 +213,32 @@ namespace jegykezelo
                 //változóba bekerül a kiválasztott szín neve vagy RGB kódja
                 Color selectedColor = colorDialog1.Color;
                 MessageBox.Show($"A választott szín: {selectedColor}", "Betűszín kiválasztva", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.ForeColor = selectedColor;
+                label1.ForeColor = selectedColor;
+                label2.ForeColor = selectedColor;
+                label3.ForeColor = selectedColor;
+                label4.ForeColor = selectedColor;
+                label5.ForeColor = selectedColor;
+                label7.ForeColor = selectedColor;
+                label8.ForeColor = selectedColor;
+                label9.ForeColor = selectedColor;
+                label10.ForeColor = selectedColor;
+                label11.ForeColor = selectedColor;
+                label12.ForeColor = selectedColor;
+                label13.ForeColor = selectedColor;
+                label14.ForeColor = selectedColor;
+                label15.ForeColor = selectedColor;
+                label16.ForeColor = selectedColor   ;
+                label17.ForeColor = selectedColor;
+                label18.ForeColor = selectedColor;
+                label19.ForeColor = selectedColor;
+                label20.ForeColor = selectedColor;
+                label21.ForeColor = selectedColor;
+                radioButton4.ForeColor = selectedColor;
+                radioButton5.ForeColor = selectedColor;
+                radioButton6.ForeColor = selectedColor;
+                checkBox3.ForeColor = selectedColor;
+                checkBox4.ForeColor = selectedColor;
+                checkBox4.ForeColor = selectedColor;
             }
         }
 
